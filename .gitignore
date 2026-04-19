@@ -1,0 +1,30 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Source photo folders (already copied into assets/img/)
+Photo Profile/
+Student Association of Civil and Business Law/
+Achievement Juara Lomba*/
+Ahmad Syaqi Magang*/
+MAGANG di PLN/
+Protocol Officer*/
+di head Devleopment of KPm/
+freelance Weeding organize/
+
+# Raw dropped files at project root (UUID photos, source docs)
+/[0-9a-f]*-[0-9a-f]*.jpeg
+/[0-9a-f]*-[0-9a-f]*.jpg
+/b031c9b7*.jpeg
+Bnsp Sertifikat.pdf
+CV BI.docx
+
+# Local scratch
+*.log
+*.tmp

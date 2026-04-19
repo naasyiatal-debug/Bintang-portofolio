@@ -908,15 +908,19 @@ strong {
   border-color: var(--navy-700);
 }
 .ach-award h3 {
-  color: var(--cream-50);
+  color: #ffffff;
   font-size: var(--text-lg);
+  font-weight: 600;
 }
 .ach-award p {
-  color: var(--cream-50);
-  font-size: 0.9rem;
-  line-height: 1.55;
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin: 0;
-  opacity: 0.94;
+  font-weight: 400;
+}
+.ach-award .ach-rank {
+  color: #f0cda4;
 }
 .ach-rank {
   font-family: var(--font-display);
@@ -1759,6 +1763,13 @@ body.lightbox-open {
 html,
 body {
   overflow-x: clip;
+}
+
+/* Safety: hero portrait must render immediately on page load,
+   independent of the IntersectionObserver reveal animation. */
+.hero-visual.reveal {
+  opacity: 1;
+  transform: none;
 }
 
 /* Focus states (a11y) */

@@ -912,9 +912,11 @@ strong {
   font-size: var(--text-lg);
 }
 .ach-award p {
-  color: var(--cream-200);
+  color: var(--cream-50);
   font-size: 0.9rem;
+  line-height: 1.55;
   margin: 0;
+  opacity: 0.94;
 }
 .ach-rank {
   font-family: var(--font-display);

@@ -907,19 +907,19 @@ strong {
   color: var(--cream-50);
   border-color: var(--navy-700);
 }
-.ach-award h3 {
+.ach-card.ach-award h3 {
   color: #ffffff;
   font-size: var(--text-lg);
   font-weight: 600;
 }
-.ach-award p {
+.ach-card.ach-award p {
   color: #f0cda4;
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
   font-weight: 400;
 }
-.ach-award .ach-rank {
+.ach-card.ach-award .ach-rank {
   color: #f0cda4;
 }
 .ach-rank {

@@ -780,7 +780,7 @@ strong {
 /* --------- Organizational --------- */
 .org-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--space-6);
 }
 .org-card {
@@ -833,7 +833,7 @@ strong {
 /* --------- Skills --------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: var(--space-6);
 }
 .skill-card {
@@ -883,7 +883,7 @@ strong {
 /* --------- Achievements --------- */
 .ach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: var(--space-6);
 }
 .ach-card {
@@ -1272,7 +1272,7 @@ strong {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--space-5);
   margin-top: var(--space-7);
 }
@@ -1386,7 +1386,7 @@ strong {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: rgba(10, 26, 48, 0.92);
+  background: rgba(42, 16, 28, 0.92);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   display: grid;
@@ -1672,6 +1672,93 @@ body.lightbox-open {
   .mobile-menu {
     display: none !important;
   }
+}
+
+/* --------- Narrow phones ---------- */
+@media (max-width: 520px) {
+  .container {
+    width: min(100% - 1.75rem, var(--container));
+  }
+  .section {
+    padding: clamp(3rem, 9vw, 4.5rem) 0;
+  }
+  .hero {
+    padding: clamp(2.5rem, 8vw, 4rem) 0 clamp(3rem, 9vw, 4.5rem);
+  }
+  .hero::before {
+    width: 360px;
+    height: 360px;
+  }
+  .display {
+    font-size: clamp(2.2rem, 1.6rem + 5vw, 2.8rem);
+    line-height: 1.05;
+    word-break: break-word;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 1.25rem + 3vw, 2.1rem);
+  }
+  .hero-cta {
+    gap: var(--space-3);
+  }
+  .hero-cta .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+  .hero-stats dd {
+    font-size: 1.7rem;
+  }
+  .hero-visual {
+    max-width: 260px;
+  }
+  .press-grid,
+  .org-grid,
+  .ach-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .ach-cert {
+    grid-template-columns: 1fr;
+  }
+  .ach-cert-btn {
+    justify-self: start;
+  }
+  .tl-head {
+    gap: var(--space-2);
+  }
+  .tl-head h3 {
+    font-size: 1rem;
+  }
+  .year-badge {
+    font-size: 0.72rem;
+  }
+  .doc-gallery,
+  .doc-gallery-compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .footer-wrap {
+    text-align: center;
+    justify-content: center;
+  }
+  .nav-wrap {
+    gap: var(--space-3);
+  }
+  .brand-name {
+    font-size: 0.95rem;
+  }
+}
+
+/* Guard against accidental horizontal scroll on mobile */
+html,
+body {
+  overflow-x: clip;
 }
 
 /* Focus states (a11y) */

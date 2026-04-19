@@ -456,6 +456,13 @@ strong {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 4 / 5;
+  min-height: 300px;
+}
+@supports not (aspect-ratio: 4 / 5) {
+  .portrait {
+    height: 0;
+    padding-bottom: 125%;
+  }
 }
 .portrait-frame {
   position: absolute;
@@ -1765,11 +1772,17 @@ body {
   overflow-x: clip;
 }
 
-/* Safety: hero portrait must render immediately on page load,
-   independent of the IntersectionObserver reveal animation. */
+/* Safety: hero portrait must always render immediately on page load,
+   independent of the IntersectionObserver reveal animation and any
+   caching/JS issues. Uses !important to defeat stale cached rules. */
+.hero-visual,
 .hero-visual.reveal {
-  opacity: 1;
-  transform: none;
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+.portrait-slide.is-active {
+  opacity: 1 !important;
 }
 
 /* Focus states (a11y) */
